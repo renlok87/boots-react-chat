@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Login from "./containers/Login";
+import AddNewMessage from "./containers/AddNewMessage";
+import Sidebar from "./containers/Sidebar";
+import Chat from "./containers/Chat";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div className="app">
+          <Login />
+          <div className='app__chatbox'>
+            <Chat/>
+            <AddNewMessage/>
+          </div>
+          <Sidebar/>
+        </div>
+    );
+};
 
 export default App;
